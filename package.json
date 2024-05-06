@@ -4,6 +4,8 @@
   "description": "This project consists of todo APIs",
   "main": "index.js",
   "scripts": {
+    "start": "npm start",
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,8 +26,10 @@
   "homepage": "https://github.com/cnhk-teach/todo-api#readme",
   "dependencies": {
     "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.3.3"
+    "mongoose": "^8.3.3",
+    "nodemon": "^3.1.0"
   }
 }

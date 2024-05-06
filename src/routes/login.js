@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt')
 const login = express.Router()
 const jwt = require('jsonwebtoken')
 
-const SECRET_KEY = 'yuyughrbgekbgjkebjldsfdjbsdbvlsdhsgdhbdsbfbvdhvj'
+const SECRET_KEY = process.env.JWT_SECRET
 
 login.post('/login', async (req, res) => {
     try {

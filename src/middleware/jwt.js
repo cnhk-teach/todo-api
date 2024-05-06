@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken')
-const SECRET_KEY = 'yuyughrbgekbgjkebjldsfdjbsdbvlsdhsgdhbdsbfbvdhvj'
+const SECRET_KEY = process.env.JWT_SECRET
 
 function verifyUser(req, res, next) {
     try {

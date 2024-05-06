@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express')
 const mongoose = require('mongoose')
 const signup = require('./src/routes/signup')
@@ -6,15 +7,15 @@ const todoAction = require('./src/routes/todoAction')
 
 const api = express()
 api.use(express.json())
+const PORT = process.env.PORT || 2323;
 
 // Connnect to MongoDb
-mongoose.connect('mongodb+srv://harish:root@cnhk-teach-db.zpoered.mongodb.net/todo')
+mongoose.connect(process.env.MONGODB_URI)
     .then(() => {
         console.log("Connected to MongoDB");
         // Start your server after successful MongoDB connection
-        api.listen(2323, ()=>{
-            console.log("Hello world!")
-            console.log("API Server is up and running in port: 2323");
+        api.listen(PORT, ()=>{
+            console.log(`Server is running on port ${PORT}`);
         })
     })
     .catch((err) => {
