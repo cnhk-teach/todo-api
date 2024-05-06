@@ -1,7 +1,9 @@
 const express = require('express')
 const mongoose = require('mongoose');
+const signup = require('./src/routes/signup')
 
 const api = express()
+api.use(express.json())
 
 // Connnect to MongoDb
 mongoose.connect('mongodb+srv://harish:root@cnhk-teach-db.zpoered.mongodb.net/todo')
@@ -17,7 +19,8 @@ mongoose.connect('mongodb+srv://harish:root@cnhk-teach-db.zpoered.mongodb.net/to
         console.error("Error connecting to MongoDB:", err);
     });
 
+api.use('/', signup)
 
-api.get('/', (req, res) => {
+api.get('/helloworld', (_req, res) => {
     res.send('Hello world!')
 })
