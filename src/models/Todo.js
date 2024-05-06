@@ -13,8 +13,7 @@ const todoSchema = new Schema({
         index: true
     },
     completedAt: {
-        type: Date,
-        required: true
+        type: Date
     }
 }, { timestamps: true });
 
