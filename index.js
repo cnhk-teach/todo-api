@@ -1,6 +1,7 @@
 const express = require('express')
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 const signup = require('./src/routes/signup')
+const login = require('./src/routes/login')
 
 const api = express()
 api.use(express.json())
@@ -20,6 +21,7 @@ mongoose.connect('mongodb+srv://harish:root@cnhk-teach-db.zpoered.mongodb.net/to
     });
 
 api.use('/', signup)
+api.use('/', login)
 
 api.get('/helloworld', (_req, res) => {
     res.send('Hello world!')
