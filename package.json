@@ -1,0 +1,25 @@
+{
+  "name": "todo-api",
+  "version": "1.0.0",
+  "description": "This project consists of todo APIs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cnhk-teach/todo-api.git"
+  },
+  "keywords": [
+    "todo",
+    "nodejs",
+    "api",
+    "cnhk"
+  ],
+  "author": "cnhk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cnhk-teach/todo-api/issues"
+  },
+  "homepage": "https://github.com/cnhk-teach/todo-api#readme"
+}
