@@ -7,7 +7,7 @@ const todoAction = require('./src/routes/todoAction')
 
 const api = express()
 api.use(express.json())
-const PORT = process.env.PORT || 2323;
+const PORT = process.env.PORT || 3000;
 
 // Connnect to MongoDb
 mongoose.connect(process.env.MONGODB_URI)
