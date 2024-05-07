@@ -4,7 +4,7 @@
   "description": "This project consists of todo APIs",
   "main": "index.js",
   "scripts": {
-    "start": "npm start",
+    "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
