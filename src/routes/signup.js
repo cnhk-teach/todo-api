@@ -16,7 +16,7 @@ signup.post('/signup', async (req, res) => {
                 res.status(201).json({ msg: "User registered successfully"})
             )
             .catch((err) => 
-                res.status(400).json({err: `User not registered, error: ${err}`})
+                err.code == 11000 ? res.status(400).json({err: `User not registered, error: Duplicate user, email id already exists`}): res.status(400).json({err: `User not registered, error: ${err}`})
             )
     }
     catch (err) {
