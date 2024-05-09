@@ -44,7 +44,7 @@ todoAction.patch('/completed/:todoId', verifyUser, async (req, res) => {
         if(validTodo.length == 0) {
             return res.status(401).json({msg: 'User cannot modify this todo item'})
         }
-        Todo.findByIdAndUpdate(validTodo[0].id, { completedAt: Date.now()})
+        Todo.findByIdAndUpdate(validTodo[0].id, { completedAt: req.body.completedAt})
             .then(() => 
                 res.status(200).json({msg: "Todo item completed!"})
             )

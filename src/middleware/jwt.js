@@ -10,13 +10,13 @@ function verifyUser(req, res, next) {
 
         jwt.verify(token, SECRET_KEY, (err, data)=>{
             if(err){
-                return res.status(403).json({ err: 'Access denied' })
+                return res.status(403).json({ err: 'Access denied: '+err })
             }
             req.user = data;
             next()
         })
     } catch (error) {
-        return res.status(500).json({ err: 'Internal error in JWT verification' })
+        return res.status(500).json({ err: 'Internal error in JWT verification, error:'+error })
     }
     
 }
